@@ -15,7 +15,7 @@ function Ingredients({ingredients}) {
 }
 
 Ingredients.propTypes = {
-    ingredients: PropTypes.array.isRequired
+    // ingredients: PropTypes.array.isRequired
 }
 
 export default Ingredients
