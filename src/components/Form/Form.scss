@@ -1,29 +1,49 @@
 .form {
     width: 500px;
-    height: 600px;
-    background-color: #778BEB;
+    height: 550px;
+    background-color:#a8bdce;
     border-radius: 20px;
-    padding: 20px 50px;
+    padding: 25px 50px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 
+    &__button {
+        margin-right: 15px;
+        padding: 5px 10px;
+    }
+
     &__input {
         width: 100%;
+        margin-top: 8px;
+        border-radius: 5px;
+        border: 1px solid $grey;
+
+        &:focus {
+            outline: none;
+            border: 1px solid $secondary;
+        }
+    }
+
+    &__input[name='name'] {
+        height: 30px;
     }
 
     &__label {
+        font-size: 1.4rem;
         width: 100%;
-        margin-bottom: 10px;
     }
 
     &__title {
+        font-size: 1.8rem;
         flex: 0 1 100%;
+        text-align: center;
+        padding: 10px;
     }
 
     &__wrap {
         flex: 0 1 100%;
-        margin-bottom: 25px;
-        border: 1px solid #fff;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }

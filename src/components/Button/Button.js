@@ -5,7 +5,7 @@ function Button(props) {
     return (
         <button className={props.className} onClick={props.onClick} {...props}>
             {props.icon ?
-                <img src = {props.icon} alt={props.alt}/>
+                <img src = {props.icon} alt={props.alt} className='button__icon'/>
                 :
                 props.children
             }

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 function Directions({directions}) {
     return (
         <section className='recipe__directions'>
-            <ol>
-                <h3>Directions</h3>
+            <h3 className='recipe__subtitle'>Directions</h3>
+            <ol className='recipe__directions-list'>
                 { directions.map((direction, index) => {
                     return <li key={index}>{ direction }</li>
                 })}

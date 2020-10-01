@@ -1,0 +1,24 @@
+.recipe-list {
+    height: 140px;
+    overflow-y: scroll;
+
+    &__item {
+        padding: 7px;
+        &:nth-child(even) {
+            background-color: $primary;
+        }
+        &:hover, &:focus {
+            background-color: $secondary;
+        }
+    }
+
+    &__wrap {
+        background-color: $light-bg;
+        height: 160px;
+        margin-bottom: 30px;
+        padding: 5px 5px;
+        border: 1.5px solid $grey;
+        border-radius: 20px;
+        overflow: hidden;        
+    }
+}

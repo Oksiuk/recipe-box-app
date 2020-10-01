@@ -1,27 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const styles = {
-    ul: {
-        listStyle: 'none',
-        padding: 0
-    }
-}
-
 function RecipeList(props) {
     return (
-        <ul className='recipe-list' style={styles.ul}> 
-            {props.recipes.map(recipe => {
-                return ( 
-                    <li className='recipe-list__item'
-                        key={recipe.id}
-                        onClick={()=> props.onToggle(recipe.id)}
-                    >
-                        { recipe.name }
-                    </li>
-                )
-            })}
-        </ul>
+        <div className='recipe-list__wrap'>
+            <ul className='recipe-list'> 
+                {props.recipes.map(recipe => {
+                    return ( 
+                        <li className='recipe-list__item'
+                            key={recipe.id}
+                            onClick={()=> props.onToggle(recipe.id)}
+                        >
+                            { recipe.name }
+                        </li>
+                    )
+                })}
+            </ul>
+        </div>
     )
 }
 

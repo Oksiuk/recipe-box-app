@@ -16,13 +16,13 @@ function Recipe(props) {
                 <h2 className='recipe__title'>{ props.recipe.name }</h2>
                 <div className='recipe__options'>
                     <Button 
-                        className='recipe__options-btn btn-delete'
+                        className='recipe__options-btn button'
                         icon = {clear}
                         alt = 'delete'
                         onClick = {()=> props.onDelete(props.recipe.id)}
                     />
                     <Button 
-                        className='recipe__options-btn btn-edit'
+                        className='recipe__options-btn button'
                         icon = {edit}  
                         alt='edit'
                         onClick={()=>props.onEdit(props.recipe.id)} 
@@ -32,14 +32,15 @@ function Recipe(props) {
             <main className='recipe__desc'>
                 <Ingredients ingredients={props.recipe.ingredients}/>
                 <Directions directions={props.recipe.directions}/>
-            </main>
-            <Button 
-                className='recipe__options-btn btn-add'
-                icon= {plus}
-                alt='add'
-                onClick={()=> props.onAdd()}
-            />
-            <footer></footer>            
+            </main>           
+            <footer className='recipe__footer'>
+                <Button 
+                    className='recipe__options-btn button'
+                    icon= {plus}
+                    alt='add'
+                    onClick={()=> props.onAdd()}
+                />
+            </footer>            
         </div>
     )
 }
@@ -52,21 +53,3 @@ Recipe.propTypes = {
 }
 
 export default Recipe
-
-
-
-
-
-
-
-
-//const bg =`url('${clear}')`;
-// const styles = {
-//     btn: {
-//         backgroundImage: `url('${edit}')`,
-//         backgroundSize: 'contain',
-//         backgroundColor: 'pink',
-//         width: '35px',
-//         height: '35px'
-//     }
-// }

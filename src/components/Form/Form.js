@@ -51,7 +51,7 @@ class Form extends React.Component {
 
     render() {
         return (
-            <form className = 'recipe__form form' onSubmit={this.handleSubmit}>
+            <form className = 'app__form form' onSubmit={this.handleSubmit}>
                 <h3 className='form__title'>Add a Recipe</h3>
                 <div className='form__wrap'>
                     <label htmlFor='recipe-name' className='form__label'>Recipe</label>
@@ -74,6 +74,7 @@ class Form extends React.Component {
                         name='ingredients'
                         placeholder='Separate each ingredient:'
                         value = {this.state.ingredients}
+                        rows='5'
                         onChange={this.handleInputChange}
                     />
                 </div>
@@ -86,12 +87,13 @@ class Form extends React.Component {
                         name='directions' 
                         placeholder='Separate each step:'
                         value={this.state.directions}
+                        rows='5'
                         onChange={this.handleInputChange}
                     />
                 </div>
                 <div className='form__wrap'>
-                    <Button className='form__button' type='submit'>{this.state.submit}</Button>
-                    <Button className='form__button' onClick={() => this.props.onClose()}>Close</Button>
+                    <Button className='form__button button' type='submit'>{this.state.submit}</Button>
+                    <Button className='form__button button' onClick={() => this.props.onClose()}>Close</Button>
                 </div>
             </form>
         )

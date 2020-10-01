@@ -53,6 +53,21 @@ const recipes = [
             `Add contents of whipped cream can; stir gently but quickly until well blended. Pour into crust; cover.`,
             `Refrigerate 6 hours, or until set. Cut into 8 slices to serve. Garnish with additional whipped cream and remaining chocolate chips, if desired.`
         ]
+    },
+    {
+        id: 4,
+        name: 'Lime Chicken Tacos',
+        ingredients: [
+            '1 1/2 pounds skinless, boneless chicken breast meat - cubed',
+            '1/8 cup red wine vinegar',
+            '1/2 lime, juiced',
+            '1 teaspoon white sugar',
+            '1/2 teaspoon salt'
+        ],
+        directions: [
+            'Saute chicken in a medium saucepan over medium high heat for about 20 minutes. Add vinegar, lime juice, sugar, salt, pepper, green onion, garlic and oregano. Simmer for an extra 10 minutes.',
+            'Heat an iron skillet over medium heat. Place a tortilla in the pan, warm, and turn over to heat the other side. Repeat with remaining tortillas. Serve lime chicken mixture in warm tortillas topped with tomato, lettuce, cheese and salsa.'
+        ]
     }
 ]
 

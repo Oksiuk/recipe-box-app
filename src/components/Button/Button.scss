@@ -1,0 +1,22 @@
+.button {
+    background-color: $light-bg;
+    border: 1.5px solid $grey;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: inherit;
+    font-weight: bold;
+
+    &__icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    &:hover {
+        background-color: $secondary;
+    } 
+
+    &:active {
+        border: 1.5px solid $grey;
+    }
+}
