@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/recipe-box-app/static/css/main.fa426e26.chunk.css",
+    "main.js": "/recipe-box-app/static/js/main.6f8d9893.chunk.js",
+    "main.js.map": "/recipe-box-app/static/js/main.6f8d9893.chunk.js.map",
+    "runtime-main.js": "/recipe-box-app/static/js/runtime-main.85ea07c2.js",
+    "runtime-main.js.map": "/recipe-box-app/static/js/runtime-main.85ea07c2.js.map",
+    "static/js/2.1ed74b75.chunk.js": "/recipe-box-app/static/js/2.1ed74b75.chunk.js",
+    "static/js/2.1ed74b75.chunk.js.map": "/recipe-box-app/static/js/2.1ed74b75.chunk.js.map",
+    "index.html": "/recipe-box-app/index.html",
+    "precache-manifest.97a2ab7fc15a620883480c92e05af910.js": "/recipe-box-app/precache-manifest.97a2ab7fc15a620883480c92e05af910.js",
+    "service-worker.js": "/recipe-box-app/service-worker.js",
+    "static/css/main.fa426e26.chunk.css.map": "/recipe-box-app/static/css/main.fa426e26.chunk.css.map",
+    "static/js/2.1ed74b75.chunk.js.LICENSE.txt": "/recipe-box-app/static/js/2.1ed74b75.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/recipe-box-app/static/media/sriracha-v4-latin-regular.a85d2527.woff2",
+    "static/media/clear.svg": "/recipe-box-app/static/media/clear.5e4a6b75.svg",
+    "static/media/edit.svg": "/recipe-box-app/static/media/edit.eea18703.svg",
+    "static/media/plus.svg": "/recipe-box-app/static/media/plus.705a940e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85ea07c2.js",
+    "static/js/2.1ed74b75.chunk.js",
+    "static/css/main.fa426e26.chunk.css",
+    "static/js/main.6f8d9893.chunk.js"
+  ]
+}
