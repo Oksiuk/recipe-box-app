@@ -15,7 +15,7 @@ function Directions({directions}) {
 }
 
 Directions.propTypes = {
-    // directions: PropTypes.array
+    directions: PropTypes.array.isRequired
 }
 
 export default Directions

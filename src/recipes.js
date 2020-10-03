@@ -14,11 +14,8 @@ const recipes = [
             '2 tablespoons chopped chives, scallion tops, or parsley',
         ],
         directions: [
-            `In a medium saucepan, melt the butter over moderately low heat.
-            Add the garlic and cook for 30 seconds. Stir in the cream, salt,
-            pepper, and artichoke hearts. Cook until just heated through, about 3 minutes.`,
-            `In a large pot of boiling, salted water, cook the fusilli until just done, about 13
-            minutes. Drain the pasta and toss with the cream sauce, Parmesan, and chives.`
+            `In a medium saucepan, melt the butter over moderately low heat. Add the garlic and cook for 30 seconds. Stir in the cream, salt, pepper, and artichoke hearts. Cook until just heated through, about 3 minutes.`,
+            `In a large pot of boiling, salted water, cook the fusilli until just done, about 13 minutes. Drain the pasta and toss with the cream sauce, Parmesan, and chives.`
         ] 
     },
     {

@@ -1,14 +1,23 @@
 .recipe-list {
     height: 140px;
     overflow-y: scroll;
+    list-style: none;
+    padding-left: 10px;
+
+    &__item, &__item-active {
+        height: 45px;
+        line-height: 45px;
+        text-indent: 10px;
+        border-bottom: 1.5px solid $secondary;
+    }
 
     &__item {
-        padding: 7px;
-        &:nth-child(even) {
-            background-color: $primary;
-        }
-        &:hover, &:focus {
+        &:hover {
             background-color: $secondary;
+            cursor: pointer;
+        }
+        &-active {
+            background-color: $primary;
         }
     }
 

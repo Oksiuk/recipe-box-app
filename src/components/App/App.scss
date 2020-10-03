@@ -1,11 +1,10 @@
 .app {
-    
+      
     &__form {
         flex: none;
     }
 
     &__overlay {
-        // display: none;
         position: fixed;
         width: 100%;
         height: 100%;

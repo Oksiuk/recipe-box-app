@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Ingredients({ingredients}) {
+
     return (
         <section className='recipe__ingredients'>
             <h3 className='recipe__subtitle'>Ingredients</h3>
@@ -15,7 +16,7 @@ function Ingredients({ingredients}) {
 }
 
 Ingredients.propTypes = {
-    // ingredients: PropTypes.array.isRequired
+    ingredients: PropTypes.array.isRequired
 }
 
 export default Ingredients

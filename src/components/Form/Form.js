@@ -10,7 +10,9 @@ class Form extends React.Component {
         let submit = 'add'
 
         if (props.data) {
-           ({ name, ingredients, directions } = props.data)
+           name = props.data.name
+           ingredients = props.data.ingredients.join('\\')
+           directions =  props.data.directions.join('\\')
            submit = 'save'
         }
         
@@ -29,11 +31,16 @@ class Form extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        const recipe = {
-            name: this.state.name,
-            ingredients: this.state.ingredients,
-            directions: this.state.directions
+        if ( !this.validateForm() ) {
+            alert( 'Invalid form inputs' )
+            return
         }
+
+        const name = this.state.name
+        const ingredients =  this.state.ingredients.split('\\')
+        const directions = this.state.directions.split('\\')
+
+        const recipe = { name, ingredients, directions }
 
         recipe.id = this.props.data ? this.props.data.id : undefined
 
@@ -42,6 +49,20 @@ class Form extends React.Component {
             : 
             this.props.onEdit(recipe)
 
+       this.clearForm()
+    }
+
+    validateForm() {
+        let { name, directions, ingredients } = this.state
+
+        if (!name || !directions || !ingredients ) {
+            return false
+        }
+
+        return true
+    }
+    
+    clearForm = () => {
         this.setState({
             name: '',
             ingredients: '',
@@ -51,7 +72,7 @@ class Form extends React.Component {
 
     render() {
         return (
-            <form className = 'app__form form' onSubmit={this.handleSubmit}>
+            <form className = 'app__form form' onSubmit={this.handleSubmit} onReset={this.props.onClose}>
                 <h3 className='form__title'>Add a Recipe</h3>
                 <div className='form__wrap'>
                     <label htmlFor='recipe-name' className='form__label'>Recipe</label>
@@ -63,6 +84,7 @@ class Form extends React.Component {
                         placeholder='Recipe name'
                         value = {this.state.name}
                         onChange={this.handleInputChange}
+                        required
                     />
                 </div>
                 <div className='form__wrap'>
@@ -72,7 +94,7 @@ class Form extends React.Component {
                         id='ingredients'
                         className='form__input'
                         name='ingredients'
-                        placeholder='Separate each ingredient:'
+                        placeholder='Separate each ingredient with "\" '
                         value = {this.state.ingredients}
                         rows='5'
                         onChange={this.handleInputChange}
@@ -85,7 +107,7 @@ class Form extends React.Component {
                         id='directions'
                         className='form__input'
                         name='directions' 
-                        placeholder='Separate each step:'
+                        placeholder='Separate each step with "\" '
                         value={this.state.directions}
                         rows='5'
                         onChange={this.handleInputChange}
@@ -93,7 +115,7 @@ class Form extends React.Component {
                 </div>
                 <div className='form__wrap'>
                     <Button className='form__button button' type='submit'>{this.state.submit}</Button>
-                    <Button className='form__button button' onClick={() => this.props.onClose()}>Close</Button>
+                    <Button className='form__button button' type='reset'>Close</Button>
                 </div>
             </form>
         )
